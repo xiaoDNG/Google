@@ -1,0 +1,34 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "./background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "assets/icons/24x24.png",
+         "38": "assets/icons/72x72.png"
+      },
+      "default_title": "点击进入apizza官网"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "assets/css/styles.css" ],
+      "js": [ "./contentScripts.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "APIZZA is a powerful API management platform",
+   "icons": {
+      "128": "assets/icons/114x114.png",
+      "16": "assets/icons/24x24.png",
+      "48": "assets/icons/72x72.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlHAEMDpLOvxQOGHmUNj6pvSqgsa8ZhMEk9wRYHBoP4o+kjR+9xMqWl6e/h8igvNWkln+o6ihYH7iYXzZGxdtne5C1xiz5+hJEXK5CGq0SwRomhiQNzmH0yh0UPsVDZpdw0Lpf0/rVsP3ik5sl++RCrNfWgBh2Di+4jLFY6NKqp3VByT/ulkM4kL5J7IFkNG1Y8TT1dOrxA7DKqUfp5FND2S0xkhH7C3OQyq4zNMW7DuGRpIETBtJIqjwkJ+XrMk0I0MeMBUdZGgsEYCio7BkwHLB80+Q14uXY41T2Ff8zrnjvayf5ck5PyIM5F42E8x5uDPOXgnrDHr4BQtOkyOFmwIDAQAB",
+   "manifest_version": 2,
+   "name": "APIZZA Send Request Plugins",
+   "permissions": [ "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "short_name": "APIZZA SQ",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.1"
+}
